@@ -1,8 +1,10 @@
+import StoreProvider from "@/components/StoreProvider"
+import { APP_DESC, APP_NAME } from "@/lib/constant"
 import "./globals.css"
 
 export const metadata = {
-	title: "The Wallpaper App",
-	description: "Upload and share your wallpapers with the world.",
+	title: APP_NAME,
+	description: APP_DESC,
 }
 
 export default function RootLayout({ children }) {
@@ -11,7 +13,11 @@ export default function RootLayout({ children }) {
 			lang="en"
 			data-theme="light"
 		>
-			<body>{children}</body>
+			<body>
+				<StoreProvider>
+					{children}
+				</StoreProvider>
+			</body>
 		</html>
 	)
 }
