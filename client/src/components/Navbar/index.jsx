@@ -1,5 +1,6 @@
 import React from "react"
 import ThemeController from "../ThemeController"
+import Link from "next/link"
 
 export default function Navbar() {
 	return (
@@ -40,27 +41,34 @@ export default function Navbar() {
 			</div>
 
 			<div className="flex items-center gap-8">
-				<div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
-					<div
-						tabIndex={0}
-						role="button"
-						className="m-1 w-12 h-12 rounded-full overflow-hidden"
-					>
-						<img
-							src="https://i.pravatar.cc/300"
-							alt="avatar"
-							className="object-cover h-full w-full"
-						/>
+				<div className="dropdown dropdown-bottom dropdown-end dropdown-hover cursor-pointer">
+					<div className="flex items-center gap-2">
+						<div
+							tabIndex={0}
+							role="button"
+							className="m-1 w-12 h-12 rounded-full overflow-hidden"
+						>
+							<img
+								src="https://i.pravatar.cc/300"
+								alt="avatar"
+								className="object-cover h-full w-full"
+							/>
+						</div>
+						<span>Aman Verma</span>
 					</div>
 					<ul
 						tabIndex={0}
 						className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-lg border"
 					>
 						<li>
-							<a>Item 1</a>
+							<Link href="/profile">Profile</Link>
 						</li>
 						<li>
-							<a>Item 2</a>
+							<Link href="/dashboard">Dashboard</Link>
+						</li>
+						<li>
+							{" "}
+							<Link href="/logout">Logout</Link>{" "}
 						</li>
 					</ul>
 				</div>
