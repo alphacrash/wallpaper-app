@@ -29,7 +29,7 @@ export default function Home() {
               </div>
               <hr />
               <div>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="">
                   {/* image grid */}
                   {/* {Array.from({ length: 20 }, (element, index) => (
 										<>
